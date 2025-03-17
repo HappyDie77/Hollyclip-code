@@ -6,7 +6,7 @@ func _on_start_pressed() -> void:
 
 
 func _on_settings_pressed() -> void:
-	get_tree().change_scene_to_file("res://Denny/Scenes/settings_menu.tscn")
+	get_tree().change_scene_to_file("res://Denny/Scenes/settings_menu_1.tscn")
 
 
 func _on_quit_pressed() -> void:

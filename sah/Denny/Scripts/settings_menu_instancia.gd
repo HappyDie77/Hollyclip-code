@@ -7,6 +7,6 @@ func _on_return_to_main_menu_pressed():
 	get_tree().paused = false
 	if not Global.pauasos:
 		Global.pauasos = true
-		queue_free()
 	if Global.pauasos:
 		Global.pauasos = false
+	queue_free()
