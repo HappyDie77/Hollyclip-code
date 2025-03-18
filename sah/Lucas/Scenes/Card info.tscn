@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://d0u2uen7vlw74"]
+[gd_scene load_steps=8 format=3 uid="uid://d0u2uen7vlw74"]
 
 [ext_resource type="Texture2D" uid="uid://cpi5ek3g27dox" path="res://Lucas/Assets/Game Cards.png" id="1_vr6y2"]
+[ext_resource type="FontFile" uid="uid://b7cvp545cl43g" path="res://Denny/Assets/Godot-Fontpack/fonts/droid-sans/DroidSans-Bold.ttf" id="2_xyh3d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_we2fm"]
 texture = ExtResource("1_vr6y2")
@@ -3287,12 +3288,15 @@ texture_region_size = Vector2i(288, 288)
 sources/0 = SubResource("TileSetAtlasSource_we2fm")
 
 [sub_resource type="LabelSettings" id="LabelSettings_hls38"]
+font = ExtResource("2_xyh3d")
 font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_378ew"]
+font = ExtResource("2_xyh3d")
 font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_u2i5y"]
+font = ExtResource("2_xyh3d")
 font_color = Color(0, 0, 0, 1)
 
 [node name="Control" type="Control"]
@@ -3320,8 +3324,68 @@ This card lets you get more
 fame and spreds the word
 around the whole world
 
-This carad only woks on
+This carad only works on
 Romance cards.
+
+Special effects:
+This card gives you a boost
+to the fame you recive when
+you publish the video."
+label_settings = SubResource("LabelSettings_hls38")
+
+[node name="Label6" type="Label" parent="."]
+layout_mode = 0
+offset_left = -527.0
+offset_top = 952.0
+offset_right = -307.0
+offset_bottom = 1261.0
+text = "Card info:
+This card lets you get more
+fame and spreds the word
+around the whole world
+
+This carad only works on
+Sci-Fi cards.
+
+Special effects:
+This card gives you a boost
+to the fame you recive when
+you publish the video."
+label_settings = SubResource("LabelSettings_hls38")
+
+[node name="Label7" type="Label" parent="."]
+layout_mode = 0
+offset_left = -539.0
+offset_top = 133.0
+offset_right = -319.0
+offset_bottom = 442.0
+text = "Card info:
+This card lets you get more
+fame and spreds the word
+around the whole world
+
+This carad only works on
+Action cards.
+
+Special effects:
+This card gives you a boost
+to the fame you recive when
+you publish the video."
+label_settings = SubResource("LabelSettings_hls38")
+
+[node name="Label16" type="Label" parent="."]
+layout_mode = 0
+offset_left = -1387.0
+offset_top = 148.0
+offset_right = -1167.0
+offset_bottom = 457.0
+text = "Card info:
+This card lets you get more
+fame and spreds the word
+around the whole world
+
+This carad works on
+on Every card.
 
 Special effects:
 This card gives you a boost
@@ -3349,6 +3413,46 @@ then the raw matarial.
 "
 label_settings = SubResource("LabelSettings_378ew")
 
+[node name="Label8" type="Label" parent="."]
+layout_mode = 0
+offset_left = -198.0
+offset_top = 984.0
+offset_right = 16.0
+offset_bottom = 1267.0
+text = "Card Info:
+This card let's you Clip the
+video where ever you want.
+
+This works only on 
+Sci-Fi cards.
+
+Special effects:
+This card Makes your 
+videos better and smother
+then the raw matarial.
+"
+label_settings = SubResource("LabelSettings_378ew")
+
+[node name="Label9" type="Label" parent="."]
+layout_mode = 0
+offset_left = -198.0
+offset_top = 152.0
+offset_right = 16.0
+offset_bottom = 435.0
+text = "Card Info:
+This card let's you Clip the
+video where ever you want.
+
+This works only on 
+Action cards.
+
+Special effects:
+This card Makes your 
+videos better and smother
+then the raw matarial.
+"
+label_settings = SubResource("LabelSettings_378ew")
+
 [node name="Label3" type="Label" parent="."]
 layout_mode = 0
 offset_left = 159.0
@@ -3364,7 +3468,43 @@ Romance cards.
 
 Special effects:
 This card gives you a 10%
-boost money gain."
+boost to money gain."
+label_settings = SubResource("LabelSettings_u2i5y")
+
+[node name="Label10" type="Label" parent="."]
+layout_mode = 0
+offset_left = 169.0
+offset_top = 1012.0
+offset_right = 365.0
+offset_bottom = 1269.0
+text = "Card Info:
+This card adds 
+effect's to your video.
+
+This card only works on
+Sci-Fi cards.
+
+Special effects:
+This card gives you a 10%
+boost to money gain."
+label_settings = SubResource("LabelSettings_u2i5y")
+
+[node name="Label11" type="Label" parent="."]
+layout_mode = 0
+offset_left = 149.0
+offset_top = 177.0
+offset_right = 345.0
+offset_bottom = 434.0
+text = "Card Info:
+This card adds 
+effect's to your video.
+
+This card only works on
+Action cards.
+
+Special effects:
+This card gives you a 10%
+boost to money gain."
 label_settings = SubResource("LabelSettings_u2i5y")
 
 [node name="Label4" type="Label" parent="."]
@@ -3373,6 +3513,32 @@ offset_left = 468.0
 offset_top = -661.0
 offset_right = 673.0
 offset_bottom = -534.0
+text = "Card Info:
+This card gives you a 
+scene that is connceted
+to the type of card you are
+using."
+label_settings = SubResource("LabelSettings_u2i5y")
+
+[node name="Label12" type="Label" parent="."]
+layout_mode = 0
+offset_left = 465.0
+offset_top = 1031.0
+offset_right = 670.0
+offset_bottom = 1158.0
+text = "Card Info:
+This card gives you a 
+scene that is connceted
+to the type of card you are
+using."
+label_settings = SubResource("LabelSettings_u2i5y")
+
+[node name="Label13" type="Label" parent="."]
+layout_mode = 0
+offset_left = 462.0
+offset_top = 174.0
+offset_right = 667.0
+offset_bottom = 301.0
 text = "Card Info:
 This card gives you a 
 scene that is connceted
@@ -3398,6 +3564,38 @@ This card increisses the total
 view count by 15%"
 label_settings = SubResource("LabelSettings_u2i5y")
 
-[node name="GameCards" type="Sprite2D" parent="."]
-position = Vector2(2170, 0)
-texture = ExtResource("1_vr6y2")
+[node name="Label14" type="Label" parent="."]
+layout_mode = 0
+offset_left = 824.0
+offset_top = 1009.0
+offset_right = 1044.0
+offset_bottom = 1266.0
+text = "Card Info:
+This card makes your voice
+heard by more people.
+
+This card only works on
+Sci-Fi cards.
+
+Special effects:
+This card increisses the total
+view count by 15%"
+label_settings = SubResource("LabelSettings_u2i5y")
+
+[node name="Label15" type="Label" parent="."]
+layout_mode = 0
+offset_left = 818.0
+offset_top = 164.0
+offset_right = 1038.0
+offset_bottom = 421.0
+text = "Card Info:
+This card makes your voice
+heard by more people.
+
+This card only works on
+Action cards.
+
+Special effects:
+This card increisses the total
+view count by 15%"
+label_settings = SubResource("LabelSettings_u2i5y")
