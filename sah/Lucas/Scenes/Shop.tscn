@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://b1hcp7ii1l2hc"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect\'s" type="Node" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect\'s"]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.693613, 0.586474, 0.284108, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="ColorRect\'s/ColorRect"]
+layout_mode = 0
+offset_left = 292.0
+offset_top = 105.0
+offset_right = 823.0
+offset_bottom = 473.0
+color = Color(0.145815, 0.1664, 0.132645, 0.596078)
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect\'s"]
+offset_left = 337.0
+offset_top = 280.0
+offset_right = 430.0
+offset_bottom = 417.0
+
+[node name="ColorRect3" type="ColorRect" parent="ColorRect\'s"]
+offset_left = 512.0
+offset_top = 280.0
+offset_right = 605.0
+offset_bottom = 417.0
+
+[node name="ColorRect4" type="ColorRect" parent="ColorRect\'s"]
+offset_left = 687.0
+offset_top = 280.0
+offset_right = 780.0
+offset_bottom = 417.0
+
+[node name="ColorRect5" type="ColorRect" parent="ColorRect\'s"]
+offset_left = 459.0
+offset_top = 160.0
+offset_right = 658.0
+offset_bottom = 201.0
+
+[node name="ColorRect6" type="ColorRect" parent="ColorRect\'s"]
+offset_left = 55.0
+offset_top = 39.0
+offset_right = 158.0
+offset_bottom = 80.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 84.0
+offset_top = 48.0
+offset_right = 124.0
+offset_bottom = 71.0
+text = "Back"
