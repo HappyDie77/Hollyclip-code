@@ -1,0 +1,457 @@
+[gd_scene load_steps=9 format=3 uid="uid://d4cwfkipawcgu"]
+
+[ext_resource type="Script" path="res://Denny/Scripts/Shop_Script.gd" id="1_hmfla"]
+[ext_resource type="FontFile" uid="uid://b7cvp545cl43g" path="res://Denny/Assets/Godot-Fontpack/fonts/droid-sans/DroidSans-Bold.ttf" id="2_2bcv7"]
+[ext_resource type="Texture2D" uid="uid://bfxtyl6qildca" path="res://Denny/Assets/Godot-Fontpack/fonts/overview.PNG" id="3_y0cmu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w4tif"]
+bg_color = Color(0.601223, 0.601223, 0.601223, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8wfw2"]
+bg_color = Color(0.295866, 0.295867, 0.295866, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_agqiu"]
+bg_color = Color(0.848762, 0.713739, 0.214126, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kmvvu"]
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4mirw"]
+
+[node name="ShopC" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Shop" type="CanvasLayer" parent="."]
+script = ExtResource("1_hmfla")
+
+[node name="Background" type="ColorRect" parent="Shop"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.252028, 0.252028, 0.252028, 1)
+
+[node name="Panel back 1" type="Panel" parent="Shop/Background"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -322.0
+offset_top = -191.0
+offset_right = 322.0
+offset_bottom = 191.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_w4tif")
+
+[node name="Card Slot 1" type="Panel" parent="Shop/Background/Panel back 1"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 50.0
+offset_top = -147.0
+offset_right = 195.0
+offset_bottom = 95.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8wfw2")
+
+[node name="Card Slot 2" type="Panel" parent="Shop/Background/Panel back 1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -72.0
+offset_top = -147.0
+offset_right = 73.0
+offset_bottom = 95.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8wfw2")
+
+[node name="Card Slot 3" type="Panel" parent="Shop/Background/Panel back 1"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -195.0
+offset_top = -147.0
+offset_right = -50.0
+offset_bottom = 95.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8wfw2")
+
+[node name="Card Buy 1" type="Button" parent="Shop/Background/Panel back 1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -270.0
+offset_top = 120.5
+offset_right = -130.0
+offset_bottom = 151.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Purchase"
+
+[node name="Card Buy 2" type="Button" parent="Shop/Background/Panel back 1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -70.0
+offset_top = 120.5
+offset_right = 70.0
+offset_bottom = 151.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Purchase"
+
+[node name="Card Buy 3" type="Button" parent="Shop/Background/Panel back 1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 130.0
+offset_top = 120.5
+offset_right = 270.0
+offset_bottom = 151.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Purchase"
+
+[node name="Card Slot 1 On" type="Panel" parent="Shop/Background/Panel back 1"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 66.0
+offset_top = -107.0
+offset_right = 179.0
+offset_bottom = 74.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_agqiu")
+
+[node name="Card Slot 2 On" type="Panel" parent="Shop/Background/Panel back 1"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 266.0
+offset_top = -107.0
+offset_right = 379.0
+offset_bottom = 74.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_agqiu")
+
+[node name="Card Slot 3 On" type="Panel" parent="Shop/Background/Panel back 1"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 465.0
+offset_top = -107.0
+offset_right = 578.0
+offset_bottom = 74.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_agqiu")
+
+[node name="CardName 1" type="Label" parent="Shop/Background/Panel back 1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -225.0
+offset_top = -139.5
+offset_right = -175.0
+offset_bottom = -116.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Card 1"
+
+[node name="CardName 2" type="Label" parent="Shop/Background/Panel back 1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -139.5
+offset_right = 25.0
+offset_bottom = -116.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Card 2"
+
+[node name="CardName 3" type="Label" parent="Shop/Background/Panel back 1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 175.0
+offset_top = -139.5
+offset_right = 225.0
+offset_bottom = -116.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Card 3"
+
+[node name="Panel cards" type="Panel" parent="Shop/Background"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 403.5
+offset_top = -193.5
+offset_right = 492.5
+offset_bottom = 193.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kmvvu")
+
+[node name="Page 1" type="Panel" parent="Shop/Background/Panel cards"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -81.0
+offset_top = -148.5
+offset_right = -7.0
+offset_bottom = -74.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8wfw2")
+
+[node name="1" type="Label" parent="Shop/Background/Panel cards/Page 1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -9.5
+offset_top = -21.0
+offset_right = 9.5
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_2bcv7")
+theme_override_font_sizes/font_size = 35
+text = "1
+"
+
+[node name="Button" type="Button" parent="Shop/Background/Panel cards/Page 1"]
+material = SubResource("ShaderMaterial_4mirw")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_2bcv7")
+theme_override_font_sizes/font_size = 40
+text = "1"
+
+[node name="Page 2" type="Panel" parent="Shop/Background/Panel cards"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -81.0
+offset_top = -64.5
+offset_right = -7.0
+offset_bottom = 9.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8wfw2")
+
+[node name="2" type="Label" parent="Shop/Background/Panel cards/Page 2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -9.5
+offset_top = -21.0
+offset_right = 9.5
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_2bcv7")
+theme_override_font_sizes/font_size = 35
+text = "2
+"
+
+[node name="Button" type="Button" parent="Shop/Background/Panel cards/Page 2"]
+material = SubResource("ShaderMaterial_4mirw")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_2bcv7")
+theme_override_font_sizes/font_size = 40
+text = "2
+"
+
+[node name="Page 3" type="Panel" parent="Shop/Background/Panel cards"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -81.0
+offset_top = 19.5
+offset_right = -7.0
+offset_bottom = 93.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8wfw2")
+
+[node name="3" type="Label" parent="Shop/Background/Panel cards/Page 3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -9.5
+offset_top = -21.0
+offset_right = 9.5
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_2bcv7")
+theme_override_font_sizes/font_size = 35
+text = "3
+"
+
+[node name="Button" type="Button" parent="Shop/Background/Panel cards/Page 3"]
+material = SubResource("ShaderMaterial_4mirw")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_2bcv7")
+theme_override_font_sizes/font_size = 40
+text = "3
+"
+
+[node name="Page 4" type="Panel" parent="Shop/Background/Panel cards"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -81.0
+offset_top = 101.5
+offset_right = -7.0
+offset_bottom = 175.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8wfw2")
+
+[node name="4" type="Label" parent="Shop/Background/Panel cards/Page 4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -9.5
+offset_top = -21.0
+offset_right = 9.5
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_2bcv7")
+theme_override_font_sizes/font_size = 35
+text = "4"
+
+[node name="Button" type="Button" parent="Shop/Background/Panel cards/Page 4"]
+material = SubResource("ShaderMaterial_4mirw")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_2bcv7")
+theme_override_font_sizes/font_size = 40
+text = "4"
+
+[node name="Label" type="Label" parent="Shop/Background/Panel cards"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -179.5
+offset_right = 20.0
+offset_bottom = -156.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_2bcv7")
+theme_override_font_sizes/font_size = 22
+text = "Page"
+
+[node name="Overview" type="Sprite2D" parent="."]
+position = Vector2(1416, 272)
+texture = ExtResource("3_y0cmu")
+
+[connection signal="pressed" from="Shop/Background/Panel back 1/Card Buy 1" to="Shop" method="_on_card_buy_1_pressed"]
+[connection signal="pressed" from="Shop/Background/Panel back 1/Card Buy 2" to="Shop" method="_on_card_buy_2_pressed"]
+[connection signal="pressed" from="Shop/Background/Panel back 1/Card Buy 3" to="Shop" method="_on_card_buy_3_pressed"]
