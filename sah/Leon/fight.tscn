@@ -125,7 +125,7 @@ texture = ExtResource("2_y66mq")
 position = Vector2(-228, -77)
 
 [node name="card_slot3" parent="card maneger/card_slots" instance=ExtResource("3_fsd1e")]
-position = Vector2(549, 324)
+position = Vector2(553, 317)
 
 [node name="card_slot" parent="card maneger/card_slots" instance=ExtResource("3_fsd1e")]
 position = Vector2(546, 160)
@@ -135,6 +135,12 @@ position = Vector2(329, 321)
 
 [node name="card_slot4" parent="card maneger/card_slots" instance=ExtResource("3_fsd1e")]
 position = Vector2(327, 157)
+
+[node name="card_slot5" parent="card maneger/card_slots" instance=ExtResource("3_fsd1e")]
+position = Vector2(437, 319)
+
+[node name="card_slot6" parent="card maneger/card_slots" instance=ExtResource("3_fsd1e")]
+position = Vector2(440, 160)
 
 [node name="Button" type="Button" parent="."]
 z_index = 1
