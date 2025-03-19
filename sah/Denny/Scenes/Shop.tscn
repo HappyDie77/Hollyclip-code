@@ -1,8 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://d4cwfkipawcgu"]
+[gd_scene load_steps=11 format=3 uid="uid://d4cwfkipawcgu"]
 
 [ext_resource type="Script" path="res://Denny/Scripts/Shop_Script.gd" id="1_hmfla"]
 [ext_resource type="FontFile" uid="uid://b7cvp545cl43g" path="res://Denny/Assets/Godot-Fontpack/fonts/droid-sans/DroidSans-Bold.ttf" id="2_2bcv7"]
+[ext_resource type="Theme" uid="uid://dmq1gfwd1fik5" path="res://Denny/Scripts/Shaders & Themes/Shop Button round.tres" id="3_m182e"]
 [ext_resource type="Texture2D" uid="uid://bfxtyl6qildca" path="res://Denny/Assets/Godot-Fontpack/fonts/overview.PNG" id="3_y0cmu"]
+[ext_resource type="FontFile" uid="uid://dg7y8bujjct72" path="res://Denny/Assets/Godot-Fontpack/fonts/xolonium/xolonium-fonts-4.1/ttf/Xolonium-Bold.ttf" id="4_aaovm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w4tif"]
 bg_color = Color(0.601223, 0.601223, 0.601223, 1)
@@ -60,9 +62,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -322.0
-offset_top = -191.0
+offset_top = -230.0
 offset_right = 322.0
-offset_bottom = 191.0
+offset_bottom = 152.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_w4tif")
@@ -122,6 +124,7 @@ offset_right = -130.0
 offset_bottom = 151.5
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("3_m182e")
 text = "Purchase"
 
 [node name="Card Buy 2" type="Button" parent="Shop/Background/Panel back 1"]
@@ -137,6 +140,7 @@ offset_right = 70.0
 offset_bottom = 151.5
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("3_m182e")
 text = "Purchase"
 
 [node name="Card Buy 3" type="Button" parent="Shop/Background/Panel back 1"]
@@ -152,6 +156,7 @@ offset_right = 270.0
 offset_bottom = 151.5
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("3_m182e")
 text = "Purchase"
 
 [node name="Card Slot 1 On" type="Panel" parent="Shop/Background/Panel back 1"]
@@ -243,9 +248,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = 403.5
-offset_top = -193.5
+offset_top = -232.5
 offset_right = 492.5
-offset_bottom = 193.5
+offset_bottom = 154.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_kmvvu")
@@ -265,25 +270,7 @@ grow_horizontal = 0
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_8wfw2")
 
-[node name="1" type="Label" parent="Shop/Background/Panel cards/Page 1"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -9.5
-offset_top = -21.0
-offset_right = 9.5
-offset_bottom = 21.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("2_2bcv7")
-theme_override_font_sizes/font_size = 35
-text = "1
-"
-
-[node name="Button" type="Button" parent="Shop/Background/Panel cards/Page 1"]
+[node name="B1" type="Button" parent="Shop/Background/Panel cards/Page 1"]
 material = SubResource("ShaderMaterial_4mirw")
 layout_mode = 1
 anchors_preset = 15
@@ -291,6 +278,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("3_m182e")
 theme_override_fonts/font = ExtResource("2_2bcv7")
 theme_override_font_sizes/font_size = 40
 text = "1"
@@ -310,24 +298,6 @@ grow_horizontal = 0
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_8wfw2")
 
-[node name="2" type="Label" parent="Shop/Background/Panel cards/Page 2"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -9.5
-offset_top = -21.0
-offset_right = 9.5
-offset_bottom = 21.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("2_2bcv7")
-theme_override_font_sizes/font_size = 35
-text = "2
-"
-
 [node name="Button" type="Button" parent="Shop/Background/Panel cards/Page 2"]
 material = SubResource("ShaderMaterial_4mirw")
 layout_mode = 1
@@ -336,6 +306,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("3_m182e")
 theme_override_fonts/font = ExtResource("2_2bcv7")
 theme_override_font_sizes/font_size = 40
 text = "2
@@ -356,24 +327,6 @@ grow_horizontal = 0
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_8wfw2")
 
-[node name="3" type="Label" parent="Shop/Background/Panel cards/Page 3"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -9.5
-offset_top = -21.0
-offset_right = 9.5
-offset_bottom = 21.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("2_2bcv7")
-theme_override_font_sizes/font_size = 35
-text = "3
-"
-
 [node name="Button" type="Button" parent="Shop/Background/Panel cards/Page 3"]
 material = SubResource("ShaderMaterial_4mirw")
 layout_mode = 1
@@ -382,6 +335,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("3_m182e")
 theme_override_fonts/font = ExtResource("2_2bcv7")
 theme_override_font_sizes/font_size = 40
 text = "3
@@ -402,23 +356,6 @@ grow_horizontal = 0
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_8wfw2")
 
-[node name="4" type="Label" parent="Shop/Background/Panel cards/Page 4"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -9.5
-offset_top = -21.0
-offset_right = 9.5
-offset_bottom = 21.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("2_2bcv7")
-theme_override_font_sizes/font_size = 35
-text = "4"
-
 [node name="Button" type="Button" parent="Shop/Background/Panel cards/Page 4"]
 material = SubResource("ShaderMaterial_4mirw")
 layout_mode = 1
@@ -427,6 +364,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("3_m182e")
 theme_override_fonts/font = ExtResource("2_2bcv7")
 theme_override_font_sizes/font_size = 40
 text = "4"
@@ -447,6 +385,38 @@ grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_2bcv7")
 theme_override_font_sizes/font_size = 22
 text = "Page"
+
+[node name="Panel cards2" type="Panel" parent="Shop/Background"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -171.0
+offset_top = -312.0
+offset_right = 171.0
+offset_bottom = -240.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kmvvu")
+
+[node name="Label" type="Label" parent="Shop/Background/Panel cards2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_aaovm")
+theme_override_font_sizes/font_size = 50
+text = "SHOP"
 
 [node name="Overview" type="Sprite2D" parent="."]
 position = Vector2(1416, 272)
