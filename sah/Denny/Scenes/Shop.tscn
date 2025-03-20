@@ -1,10 +1,17 @@
-[gd_scene load_steps=11 format=3 uid="uid://d4cwfkipawcgu"]
+[gd_scene load_steps=10 format=3 uid="uid://d4cwfkipawcgu"]
 
 [ext_resource type="Script" path="res://Denny/Scripts/Shop_Script.gd" id="1_hmfla"]
 [ext_resource type="FontFile" uid="uid://b7cvp545cl43g" path="res://Denny/Assets/Godot-Fontpack/fonts/droid-sans/DroidSans-Bold.ttf" id="2_2bcv7"]
 [ext_resource type="Theme" uid="uid://dmq1gfwd1fik5" path="res://Denny/Scripts/Shaders & Themes/Shop Button round.tres" id="3_m182e"]
 [ext_resource type="Texture2D" uid="uid://bfxtyl6qildca" path="res://Denny/Assets/Godot-Fontpack/fonts/overview.PNG" id="3_y0cmu"]
 [ext_resource type="FontFile" uid="uid://dg7y8bujjct72" path="res://Denny/Assets/Godot-Fontpack/fonts/xolonium/xolonium-fonts-4.1/ttf/Xolonium-Bold.ttf" id="4_aaovm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_agqiu"]
+bg_color = Color(0.848762, 0.713739, 0.214126, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w4tif"]
 bg_color = Color(0.601223, 0.601223, 0.601223, 1)
@@ -20,20 +27,11 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_agqiu"]
-bg_color = Color(0.848762, 0.713739, 0.214126, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kmvvu"]
 corner_radius_top_left = 20
 corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_4mirw"]
 
 [node name="ShopC" type="Control"]
 layout_mode = 3
@@ -45,6 +43,20 @@ grow_vertical = 2
 
 [node name="Shop" type="CanvasLayer" parent="."]
 script = ExtResource("1_hmfla")
+
+[node name="Card Slot 1 On" type="Panel" parent="Shop"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -124.5
+offset_right = -143.0
+offset_bottom = 72.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_agqiu")
 
 [node name="Background" type="ColorRect" parent="Shop"]
 anchors_preset = 15
@@ -62,9 +74,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -322.0
-offset_top = -230.0
+offset_top = -191.0
 offset_right = 322.0
-offset_bottom = 152.0
+offset_bottom = 191.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_w4tif")
@@ -96,6 +108,21 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_8wfw2")
 
+[node name="Card Slot 2 On" type="Panel" parent="Shop/Background/Main shop/Card Slot 2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -56.5
+offset_top = -98.5
+offset_right = 56.5
+offset_bottom = 98.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_agqiu")
+
 [node name="Card Slot 3" type="Panel" parent="Shop/Background/Main shop"]
 layout_mode = 1
 anchors_preset = 6
@@ -110,6 +137,21 @@ offset_bottom = 95.0
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_8wfw2")
+
+[node name="Card Slot 3 On" type="Panel" parent="Shop/Background/Main shop/Card Slot 3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -56.5
+offset_top = -98.5
+offset_right = 56.5
+offset_bottom = 98.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_agqiu")
 
 [node name="Card Buy 1" type="Button" parent="Shop/Background/Main shop"]
 layout_mode = 1
@@ -159,233 +201,6 @@ grow_vertical = 2
 theme = ExtResource("3_m182e")
 text = "Purchase"
 
-[node name="Card Slot 1 On" type="Panel" parent="Shop/Background/Main shop"]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = 66.0
-offset_top = -107.0
-offset_right = 179.0
-offset_bottom = 74.0
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_agqiu")
-
-[node name="Card Slot 2 On" type="Panel" parent="Shop/Background/Main shop"]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = 266.0
-offset_top = -107.0
-offset_right = 379.0
-offset_bottom = 74.0
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_agqiu")
-
-[node name="Card Slot 3 On" type="Panel" parent="Shop/Background/Main shop"]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = 465.0
-offset_top = -107.0
-offset_right = 578.0
-offset_bottom = 74.0
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_agqiu")
-
-[node name="CardName 1" type="Label" parent="Shop/Background/Main shop"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -225.0
-offset_top = -139.5
-offset_right = -175.0
-offset_bottom = -116.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "Card 1"
-
-[node name="CardName 2" type="Label" parent="Shop/Background/Main shop"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -25.0
-offset_top = -139.5
-offset_right = 25.0
-offset_bottom = -116.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "Card 2"
-
-[node name="CardName 3" type="Label" parent="Shop/Background/Main shop"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 175.0
-offset_top = -139.5
-offset_right = 225.0
-offset_bottom = -116.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "Card 3"
-
-[node name="Page nr" type="Panel" parent="Shop/Background"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 403.5
-offset_top = -232.5
-offset_right = 492.5
-offset_bottom = 154.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_kmvvu")
-
-[node name="Page 1" type="Panel" parent="Shop/Background/Page nr"]
-layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -81.0
-offset_top = -148.5
-offset_right = -7.0
-offset_bottom = -74.5
-grow_horizontal = 0
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_8wfw2")
-
-[node name="B1" type="Button" parent="Shop/Background/Page nr/Page 1"]
-material = SubResource("ShaderMaterial_4mirw")
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = ExtResource("3_m182e")
-theme_override_fonts/font = ExtResource("2_2bcv7")
-theme_override_font_sizes/font_size = 40
-text = "1"
-
-[node name="Page 2" type="Panel" parent="Shop/Background/Page nr"]
-layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -81.0
-offset_top = -64.5
-offset_right = -7.0
-offset_bottom = 9.5
-grow_horizontal = 0
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_8wfw2")
-
-[node name="Button" type="Button" parent="Shop/Background/Page nr/Page 2"]
-material = SubResource("ShaderMaterial_4mirw")
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = ExtResource("3_m182e")
-theme_override_fonts/font = ExtResource("2_2bcv7")
-theme_override_font_sizes/font_size = 40
-text = "2
-"
-
-[node name="Page 3" type="Panel" parent="Shop/Background/Page nr"]
-layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -81.0
-offset_top = 19.5
-offset_right = -7.0
-offset_bottom = 93.5
-grow_horizontal = 0
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_8wfw2")
-
-[node name="Button" type="Button" parent="Shop/Background/Page nr/Page 3"]
-material = SubResource("ShaderMaterial_4mirw")
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = ExtResource("3_m182e")
-theme_override_fonts/font = ExtResource("2_2bcv7")
-theme_override_font_sizes/font_size = 40
-text = "3
-"
-
-[node name="Page 4" type="Panel" parent="Shop/Background/Page nr"]
-layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -81.0
-offset_top = 101.5
-offset_right = -7.0
-offset_bottom = 175.5
-grow_horizontal = 0
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_8wfw2")
-
-[node name="Button" type="Button" parent="Shop/Background/Page nr/Page 4"]
-material = SubResource("ShaderMaterial_4mirw")
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = ExtResource("3_m182e")
-theme_override_fonts/font = ExtResource("2_2bcv7")
-theme_override_font_sizes/font_size = 40
-text = "4"
-
-[node name="Label" type="Label" parent="Shop/Background/Page nr"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -179.5
-offset_right = 20.0
-offset_bottom = -156.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("2_2bcv7")
-theme_override_font_sizes/font_size = 22
-text = "Page"
-
 [node name="Title" type="Panel" parent="Shop/Background"]
 layout_mode = 1
 anchors_preset = 8
@@ -393,10 +208,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -171.0
-offset_top = -312.0
-offset_right = 171.0
-offset_bottom = -240.0
+offset_left = -125.0
+offset_top = -268.0
+offset_right = 125.0
+offset_bottom = -196.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_kmvvu")
@@ -425,15 +240,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 180.0
-offset_top = -312.0
-offset_right = 319.0
-offset_bottom = -240.0
+offset_left = 133.5
+offset_top = -268.0
+offset_right = 314.5
+offset_bottom = -196.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_kmvvu")
 
-[node name="Money" type="Label" parent="Shop/Background/Player money"]
+[node name="money" type="Label" parent="Shop/Background/Player money"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -448,6 +263,32 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("4_aaovm")
 theme_override_font_sizes/font_size = 50
+
+[node name="Player Inventory" type="Panel" parent="Shop/Background"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 21.0
+offset_top = -269.5
+offset_right = 236.0
+offset_bottom = 269.5
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_w4tif")
+
+[node name="Label" type="Label" parent="Shop/Background/Player Inventory"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -52.5
+offset_top = 16.0
+offset_right = 52.5
+offset_bottom = 43.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_2bcv7")
+theme_override_font_sizes/font_size = 22
+text = "Inventory"
 
 [node name="Overview" type="Sprite2D" parent="."]
 position = Vector2(1416, 272)
