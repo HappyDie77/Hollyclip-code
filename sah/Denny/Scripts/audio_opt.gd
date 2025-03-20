@@ -8,7 +8,7 @@ func _ready() -> void:
 	$Volume/Music.value = db_to_linear(AudioServer.get_bus_volume_db(2))
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	release_focus()
 
 func _on_master_mouse_exited() -> void:
